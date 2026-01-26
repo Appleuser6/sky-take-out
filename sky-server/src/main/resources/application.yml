@@ -2,6 +2,17 @@ server:
   port: 8080
 
 spring:
+  redis:
+    host: 192.168.158.128
+    port: 6379
+    password: 614654
+    database: 0
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-idle: 8
   profiles:
     active: dev
   main:
@@ -34,6 +45,6 @@ sky:
     # 设置jwt签名加密时使用的秘钥
     admin-secret-key: itcast
     # 设置jwt过期时间
-    admin-ttl: 7200000
+    admin-ttl: 720000000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
